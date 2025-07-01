@@ -1,6 +1,6 @@
 // 🔗 PASTE URL WEB APP DARI GOOGLE APPS SCRIPT DI SINI
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwPTlC-8Wl52GCTxPR05vocVwBKe6wx6rMkdw33dqwvs50fV-lA8LGyAjr5Di44rvArMQ/exec";
+  "https://script.google.com/macros/s/AKfycbwcFJWrNGNE38-1J-4JEuyz2YGcD5nyPKkSwamPykERqaBVL0VBcyDZqeQvxrXaXjbq/exec";
 
 const form = document.getElementById("dataForm");
 const submitButton = document.getElementById("submitButton");
