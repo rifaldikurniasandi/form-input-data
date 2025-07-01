@@ -1,3 +1,4 @@
+// 🔗 PASTE URL WEB APP DARI GOOGLE APPS SCRIPT DI SINI
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbwPTlC-8Wl52GCTxPR05vocVwBKe6wx6rMkdw33dqwvs50fV-lA8LGyAjr5Di44rvArMQ/exec";
 
@@ -14,7 +15,6 @@ form.addEventListener("submit", function (e) {
 
   const formData = new FormData(form);
   const dataObject = {};
-  
   formData.forEach((value, key) => {
     dataObject[key] = value;
   });
@@ -23,14 +23,15 @@ form.addEventListener("submit", function (e) {
     method: "POST",
     mode: "no-cors",
     headers: {
-      "Content-Type": "application/json",
+      // GANTI INI:
+      "Content-Type": "text/plain;charset=utf-8", // <-- PERUBAHAN KRUSIAL DI SINI
     },
     body: JSON.stringify(dataObject),
   })
     .then((response) => {
       statusDiv.innerText = "✅ Data berhasil terkirim!";
       statusDiv.style.color = "green";
-      form.reset(); // Mengosongkan form
+      form.reset();
     })
     .catch((error) => {
       console.error("Error!", error.message);
