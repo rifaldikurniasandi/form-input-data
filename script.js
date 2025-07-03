@@ -14,6 +14,10 @@ form.addEventListener("submit", function (e) {
   statusDiv.innerText = "";
 
   const formData = new FormData(form);
+  // Tambahkan tanggal otomatis (format YYYY-MM-DD)
+  const today = new Date();
+  const tanggal = today.toISOString().split("T")[0]; // Format YYYY-MM-DD
+  formData.append("tanggal", tanggal);
 
   console.log(
     "Data yang akan dikirim (FormData):",
